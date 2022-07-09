@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		// console.log("Inline inside head tag");
+
+		// --------------------------------------------------
+		
+		// document.write("Hello World <br />");
+		// document.write(4+5 + "<br />");
+		// var jsVariable = "Variable content <br />";
+		// document.write(jsVariable);
+
+		// --------------------------------------------------
+
+		// window.alert(4+2);
+		// window.alert("Hello World <br />");
+
+		// --------------------------------------------------
+
+		// Primitive Data Type: String, Number, Boolean, Undefined, Null
+		// Non-Primitive Data Type: Object, Array, RegExp
+
+		/*var roll; // Declaring Variable - undefined
+		document.write(roll + "<br />");
+		roll = 101; // Initializing Variable
+		document.write(roll + "<br />");
+
+		var name; // Declaring Variable - undefined
+		name = "Keyur Rajpara"; // Initializing Variable
+
+		var roll = 101; // Declaring + Initializing Both In One Line
+
+		var ans = true; // boolean
+
+		var x = 10, y = 20, z = 30;
+		var fname = "Keyur", lname = "Rajpara";
+		var fname = "Keyur", roll = 44;*/
+
+		// --------------------------------------------------
+
+		// Single Line Comment
+		/*
+			Multi line comment
+		*/
+
+		// --------------------------------------------------
+
+		
+		// JavaScript Operators
+		// - Arithmetic Operators
+		// +   -   *   /   %   ++   --
+
+		// - Comparison (Relational) Operators
+		// <   >   <=   >=   ==   !=   ===   !==
+
+		// - Logical Operators
+		// &&   ||   !
+
+		// - Bitwise Operators
+		// <<   >>   ~   &   |   ^
+
+		// - Assignment Operators
+		// =   +=   -=   *=   /=   %=   <<=   >>=   >>>=   &=   ^=   |=
+
+		// --------------------------------------------------
+
+		// var a = prompt("Enter Value: ");
+		// document.write(a);
+
+		// --------------------------------------------------
+
+		/*if(1){
+		}
+
+		if(1){
+		}
+		else{
+		}
+
+		if(1){
+		}
+		else if(1){
+		}
+		else{
+		}
+
+		var day = 1;
+		switch(day){
+			case 1:
+				document.write("Sunday");
+				break;
+			case 2:
+				document.write("Monday");
+				break;
+			case 3:
+			case 4:
+				document.write("Tuesday");
+				break;
+			default:
+				document.write("Wrong");
+				break;
+		}*/
+
+		// --------------------------------------------------
+
+		/*for (var i = 0; i < 5; i++) {
+			document.write(i + "<br />");
+		}*/
+
+		/*var i = 0;
+		for (;;) {
+			if(i < 5){
+				document.write(i + "<br />");
+				i++;
+			}
+			else{
+				break;
+			}
+		}*/
+
+		/*for(i=0; i<3; i++){
+			document.write("<strong>Outer Loop </strong>" + i + "<br>");
+			for(j=0; j<5; j++){
+				document.write("Inner Loop " + j + "<br>");
+			}
+		}*/
+
+		/*var i = 0;
+		while(i<5){
+			document.write(i + "<br>");
+			i++;
+		}*/
+
+		/*var i = 0;
+		while(true){
+			if(i==3){
+				break;
+			}
+			document.write(i + "<br>");
+			i++;
+		}*/
+
+		/*var i = 0;
+		while(i<3)
+		{
+			document.write("<strong>Outer Loop </strong>" + i + "<br>");
+			i++;
+			var j = 0;
+			while(j<5)
+			{
+				document.write("Inner Loop " + j + "<br>");
+				j++;
+			}
+		}*/
+
+		/*var i = 0;
+		do{
+			document.write(i + "<br>");
+			i++;
+		}while(i<5);*/
+
+		/*var i = 0;
+		do{
+			if(i==3){
+				break;
+			}
+			document.write(i + "<br>");
+			i++;
+		}while(true);*/
+
+		/*var i = 0;
+		do{
+			document.write("<strong>Outer Loop </strong>" + i + "<br>");
+			i++;
+			var j = 0;
+			do{
+				document.write("Inner Loop " + j + "<br>");
+				j++;
+			}while(j<5);
+		}while(i<3);*/
+
+		// --------------------------------------------------
+
+		/*for(i=1; i<=10; i++){
+			if(i==8){
+				break; // stop loop
+			}
+			document.write(i + "<br>");
+		}*/
+
+		// --------------------------------------------------
+
+		/*for(i=1; i<=10; i++){
+			if(i==8){
+				continue;	// skip loop
+			}
+			document.write(i + "<br>");
+		}*/
+
+		// --------------------------------------------------
+
+		/*Type of function
+		[1] Library or Built-in functions
+			Ex: valueOf(), write(), alert() etc...
+		[2] User-defined functions*/
+
+		// FUNCTION
+		/*function display(){ // Creating a function
+			document.write("Body of display function");
+		}
+		display(); // Calling a function
+		*/
+
+		// FUNCTION WITH PARAMETER
+		/*function display(name) {
+			document.write(name);
+		}
+		display("Keyur Rajpara", 1);
+		*/
+
+		// FUNCTION ARGUMENT MISSING
+		/*function add(a, b, c) {
+			document.write("A: " + a + " B: " + b + " C: " + c);
+		}
+		add(10, 20);*/
+		
+		// ARGUMENTS OBJECT IN FUNCTION
+		/*function disp(name1, name2){
+			arguments[0] = "Hello";
+
+			document.write(name1 + "<br>");
+			document.write(arguments[0] + "<br><br>");
+
+			document.write(name2 + "<br>");
+			document.write(arguments[1] + "<br><br>");
+
+			document.write(arguments.length); // Number of passed arguments from calling a function
+		}
+		disp("Keyur", "World");*/
+
+		/*function disp(){
+			for (var i = 0; i < arguments.length; i++) {
+				document.write(arguments[i] + " ");
+			}
+			document.write("<br>");
+			document.write(arguments.callee); // returns function code
+		}
+		disp("Keyur", "Hello", "World");*/
+
+		// TOO MANY FUNCTION ARGUMENTS
+		/*function add(a, b) {
+			document.write("A: " + a + " B: " + b + " C: " + arguments[2]);
+		}
+		add(10, 20, 30);*/
+
+		// DEFAULT PARAMETER
+		// Need to write null in small letters
+		/*function add(a, b, c=70, d=null) {
+			document.write("A: " + a + "<br>");
+			document.write("B: " + b + "<br>");
+			document.write("C: " + c + "<br>");
+			document.write("D: " + d + "<br>");
+		}
+		add(10, 20, 30);
+		add(10, 20);*/
+
+		/*function add(name, arr=[101, 102]){
+			document.write("Name: " + name + "<br>");
+			document.write("Arr[0]: " + arr[0] + "<br>");
+			document.write("Arr[1]: " + arr[1] + "<br>");
+		}
+		add("Hello", [10,20]);*/
+
+		// REST PARAMETER
+		/*function show(a, ...restOfArguments) {
+			document.write("A: " + a + "<br>");
+			document.write("restOfArguments: " + restOfArguments + "<br>");
+			document.write("restOfArguments[0]: " + restOfArguments[0] + "<br>");
+			document.write("restOfArguments[1]: " + restOfArguments[1] + "<br>");
+			document.write("restOfArguments[2]: " + restOfArguments[2] + "<br>");
+			document.write("restOfArguments[3]: " + restOfArguments[3] + "<br>");
+		}
+		show(10, 20, 30, 40, 50);*/
+
+		// RETURN STATEMENT
+		/*function add(a, b) {
+			return (a+b);
+		}
+		document.write(add(10, 20) + "<br>");
+		document.write(add(30, 40) + "<br>");*/
+
+		// VARIABLE SCOPE
+		// GLOBAL SCOPE
+		/*var i = "I am global variable"; // scope is global
+		function show() {
+			document.write(i + "<br>");
+		}
+		show();
+		document.write(i + "<br>"); // outside
+		function disp() { // Inside function
+			document.write(i + "<br>");
+		}
+		disp();
+		if(1){ // Inside block
+			document.write(i + "<br>");
+		}*/
+
+		// LOCAL SCOPE
+		/*function show(){
+			var j = "I am local variable"; // scope is only function
+			document.write(j + "<br>");
+		}
+		show();
+		document.write(j + "<br>"); // can't access*/
+
+		// GLOBAL SCOPE
+		/*function show(){
+			j = "I am global variable inside function"; // scope is global
+			document.write(j + "<br>");
+		}
+		show();
+		document.write(j + "<br>");*/
+
+		// 
+
+		// --------------------------------------------------
+	</script>
+	<script type="text/javascript" src="js-script.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		// console.log("Inline inside body tag");
+	</script>
+</body>
+</html>
