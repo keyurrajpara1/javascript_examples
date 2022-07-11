@@ -28,14 +28,10 @@
 		document.write(roll + "<br />");
 		roll = 101; // Initializing Variable
 		document.write(roll + "<br />");
-
 		var name; // Declaring Variable - undefined
 		name = "Keyur Rajpara"; // Initializing Variable
-
 		var roll = 101; // Declaring + Initializing Both In One Line
-
 		var ans = true; // boolean
-
 		var x = 10, y = 20, z = 30;
 		var fname = "Keyur", lname = "Rajpara";
 		var fname = "Keyur", roll = 44;*/
@@ -75,19 +71,16 @@
 
 		/*if(1){
 		}
-
 		if(1){
 		}
 		else{
 		}
-
 		if(1){
 		}
 		else if(1){
 		}
 		else{
 		}
-
 		var day = 1;
 		switch(day){
 			case 1:
@@ -231,13 +224,10 @@
 		// ARGUMENTS OBJECT IN FUNCTION
 		/*function disp(name1, name2){
 			arguments[0] = "Hello";
-
 			document.write(name1 + "<br>");
 			document.write(arguments[0] + "<br><br>");
-
 			document.write(name2 + "<br>");
 			document.write(arguments[1] + "<br><br>");
-
 			document.write(arguments.length); // Number of passed arguments from calling a function
 		}
 		disp("Keyur", "World");*/
@@ -325,7 +315,267 @@
 		show();
 		document.write(j + "<br>");*/
 
-		// 
+		/*function show(){
+			var j = "J a Local variable of Outer Function";
+			document.write(j + "<br>");
+			function innerFun(){
+				var k = "K a Local variable of Inner Function";
+				document.write(k + "<br>");
+				document.write(j + "<br>");
+			}
+			innerFun();
+			document.write(k + "<br>"); // can't access
+		}
+		show();*/
+
+		// BLOCK SCOPE - Ex: if statement block
+		/*if(1){
+			var i = 10; // scope is global
+			document.write(i + "<br>");
+		}
+		document.write(i + "<br>");*/
+
+		/*if(1){
+			let i = 10; // scope is block
+			document.write(i + "<br>");
+		}
+		document.write(i + "<br>");*/
+
+		// VARIABLE HOISTING
+		/*var a = 10;
+		document.write(a);
+
+		// JS Execution
+		// var a;
+		// a = 10;
+		// document.write(a);*/
+
+		/*var a = 10;
+		document.write(a + " " + b + "<br>");
+		var b = 20;
+		document.write(a + " " + b);
+
+		// JS Execution
+		// var a;
+		// var b;
+		// a = 10;
+		// document.write(a + " " + b + "<br>");
+		// b = 20;
+		// document.write(a + " " + b);*/
+
+		/*a = 10;
+		document.write(a);
+		var a;
+
+		// JS Execution
+		// var a;
+		// a = 10;
+		// document.write(a);*/
+
+		/*var i = "Hello";
+		document.write(i + "<br>");
+		function show(){
+			document.write(i + "<br>");
+			var i = "Keyur";
+			document.write(i + "<br>");
+		}
+		show();
+
+		// JS Execution
+		// var i;
+		// i = "Hello";
+		// document.write(i + "<br>");
+		// function show(){
+		// 	var i;
+		// 	document.write(i + "<br>");
+		// 	i = "Keyur";
+		// 	document.write(i + "<br>");
+		// }*/
+
+		// CLOSURE
+		/*var i = 10;
+		function show(){
+			var j = 20;
+			document.write(j + "<br>");
+			document.write(i + "<br>");
+		}
+		show();*/
+
+		/*function show(){
+			var j = "J a local variable of outer function";
+			document.write(j + "<br>");
+			function innerFun(){
+				var k = "K a local variable of inner function";
+				document.write(k + "<br>");
+				document.write(j + "<br>");
+			}
+			innerFun();
+			document.write(k + "<br>");
+		}
+		show();*/
+
+		// FUNCTION EXPRESSION
+		/*
+		// function declaration
+		show();
+		function show(){
+			document.write("Keyur Rajpara <br>");
+		}
+		show(); */
+
+		/*
+		// function expression
+		// disp(); // can't access
+		var disp = function show(){
+			document.write("Keyur <br>");
+		}
+		disp(); */
+
+		// ANONYMOUS FUNCTION
+		/*var disp = function(){
+			document.write("Keyur <br>");
+		}
+		disp();*/
+
+		// PASSING ANONYMOUS FUNCTION AS ARGUMENT
+		/*function disp(myfun){
+			return myfun();
+		}
+		document.write(disp( function(){
+			return "Keyur";
+		} ));*/
+
+		// RETURNING ANONYMOUS FUNCTION
+		/*function disp(a){
+			return function(b){
+				return a+b;
+			};
+		}
+		var af = (disp(10));
+		document.write(af(20));*/
+
+		// ARROW FUNCTION
+		/*// Function declaration
+		function show(){
+			document.write("Function declaration <br>");
+		}
+		show();*/
+
+		/*// Function expression
+		myfun1(); // can't access
+		var myfun1 = function show(){
+			document.write("Function expression <br>");
+		};
+		myfun1();*/
+
+		/*// Anonymous function
+		myfun2(); // can't access
+		var myfun2 = function(){
+			document.write("Anonymous function <br>");
+		};
+		myfun2();*/
+
+		/*// Arrow function
+		// myfun(); // can't access
+		var myfun = () => {
+			document.write("Arrow function <br>");
+		}
+		myfun();*/
+
+		// IMMEDIATELY INVOKED FUNCTION EXPRESSION
+		/*(function (b){
+			var a = 10;
+			document.write(a + " " + b);
+		})(20);*/
+
+		// TYPEOF OPERATOR
+		/*var a = 13;
+		document.write(typeof(a) + "<br>");
+		document.write(typeof("Hello") + "<br>");*/
+
+		// UNDEFINED
+		/*var a;
+		// Value not assigned Undefined
+		document.write(a + "<br>");
+
+		// b doesn't exist Undefined
+		document.write(typeof(b) + "<br>");
+
+		// Undefined error
+		document.write(b + "<br>");*/
+
+		// NULL
+		/*var a = null;
+		document.write(a + "<br>");
+		document.write(typeof(a) + "<br>");*/
+
+		// VAR, LET AND CONST
+		/*function myvar(){
+			var a = 10;
+			if(true){
+				var a = 20;
+				document.write(a + "<br>");
+			}
+			document.write(a + "<br>");
+		}
+		myvar();*/
+
+		/*function mylet(){
+			let a = 70;
+			if(true){
+				let a = 90;
+				document.write(a + "<br>");
+			}
+			document.write(a + "<br>");
+		}
+		mylet();*/
+
+		/*for (var i = 0; i < 5; i++) {
+			document.write(i + "<br>");
+		}
+		document.write(i + "<br>");*/
+
+		/*for (let i = 0; i < 5; i++) {
+			document.write(i + "<br>");
+		}
+		document.write(i + "<br>"); // can't access*/
+
+		// OBJECT LITERAL
+		/*// Declaration of object
+		var fees = {};
+
+		// Initialization of object
+		// fees.Rahul = 100;
+		fees["Rahul"] = 100;
+		fees["Super man"] = 400;
+		fees["total"] = function(){ return (100 + 200); };
+		document.write(fees.Rahul + "<br>");
+		document.write(fees["Rahul"] + "<br>");
+		document.write(fees["Super man"] + "<br>");
+		document.write(fees["total"]() + "<br>");*/
+
+		// Declaration and Initialization of object
+		/*var fees = {"Rahul":100, "Super man": 200, "total": function(){
+			return (100+200);
+		}};
+		document.write(fees["Rahul"] + "<br>");
+		document.write(fees["total"]() + "<br>");*/
+
+		// OBJECT CONSTRUCTOR
+		/*var fees = new Object();
+		fees["Rahul"] = 100;
+		fees["total"] = function(){ return (100 + 200); };
+		document.write(fees["Rahul"] + "<br>");
+		document.write(fees["total"]() + "<br>");*/
+
+		// DELETING PROPERTIES
+		/*var fees = {"Rahul":100, "Sumit":200};
+		console.log(fees);
+		delete fees["Rahul"];
+		console.log(fees);*/
+
+		// FACTORY FUNCTION
+		
 
 		// --------------------------------------------------
 	</script>
