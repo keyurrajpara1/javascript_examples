@@ -575,6 +575,143 @@
 		console.log(fees);*/
 
 		// FACTORY FUNCTION
+		/*function mobile(modelNo){
+			return {
+				"model": modelNo,
+				"price": function(){
+					return "Price Rs.3000";
+				}
+			};
+		}
+		var samsung = mobile('galaxy');
+		var nokia = mobile('3310');
+		document.write(samsung["model"] + " " + samsung.price() + "<br>");
+		document.write(nokia["model"] + " " + nokia.price() + "<br>");*/
+
+		// CONSTRUCTOR
+		/*function mobile(modelNo){
+			this["model"] = modelNo;
+			this["price"] = function(){
+				document.write(this["model"] + " Price Rs.3000 <br>");
+			};
+		}
+		var samsung = new mobile('galaxy');
+		var nokia = new mobile('3310');
+		samsung.price();
+		nokia.price();*/
+
+		// CHECK PROPERTIES EXISTS
+		/*function mobile(modelNo){
+			this["model"] = modelNo;
+			this["memory"] = 4;
+		}
+		var samsung = new mobile('Galaxy');
+		var nokia = new mobile('3310');
+		if(typeof nokia["memory"] !== "undefined"){
+			document.write("Available");
+		}
+		else{
+			document.write("Doesn't Exist");
+		}
+		if("memory" in nokia){
+			document.write("Available");
+		}
+		else{
+			document.write("Doesn't Exist");
+		}
+		if(nokia.hasOwnProperty("memory")){
+			document.write("Available");
+		}
+		else{
+			document.write("Doesn't Exist");
+		}*/
+
+		// FOR IN LOOP
+		/*function mobile(modelNo){
+			this["model"] = modelNo;
+			this["color"] = "white";
+			this["ram"] = "4GB";
+			this["price"] = function(){
+				document.write(this["model"] + " Price Rs.3000 <br>");
+				return this["model"] + " Price Rs.3000 <br>";
+			}
+		}
+		var samsung = new mobile("Galaxy");
+		var nokia = new mobile("3310");
+		for(var specificationOfMobile in nokia){
+			if(typeof nokia[specificationOfMobile] !== "function"){
+				document.write(specificationOfMobile + " - " + nokia[specificationOfMobile] + "<br>");
+			}
+			else{
+				document.write(specificationOfMobile + " - " + nokia[specificationOfMobile]() + "<br>");
+			}
+		}
+		document.write(Object.keys(nokia));*/
+
+		// WAYS OF CREATING OBJECTS
+		/*// Object literal
+		var fees = {};
+		fees["Rahul"] = 200;
+
+		// Object literal Declare and Initial
+		var fees = { "Rahul": 200 };
+
+		// Object Constructor
+		var fees = new Object();
+
+		// Factory function
+		function mobile(){
+			return {
+				"model":"Galaxy",
+			}
+		}
+		var samsung = mobile();
+		var lg = mobile();
+
+		// Constructor function
+		function mobile() {
+			this["model"] = "Galaxy";
+		}
+		var samsung = new mobile();
+		var lg = new mobile();
+			// OR
+		var mobile = function() {
+			this["model"] = "Galaxy";
+		}
+		var samsung = new mobile();
+		var lg = new mobile();*/
+
+		// CONSTRUCTOR AS A CLASS - PRIVATE PROPERTIES AND METHODS - ACCESS PRIVATE PROPERTY FROM OUTSIDE
+		/*var mobile = function(modelNo, sellingPrice){
+			this.model = modelNo; // public property
+			this.color = "White"; // public property
+			this.price = 3000; // public property
+			this.sellingPrice = sellingPrice; // public property
+			this.sellingPriceFun = function(){ // public function
+				return (this.price + this.sellingPrice);
+			};
+			this.data = function(){ // public function
+				document.write("Model No: " + this.model + " Price: " + this.sellingPriceFun() + "<br>");
+			}
+			var price1 = 1100; // private property
+			let price2 = 2200; // private property
+			const price3 = 3300; // private property
+			var show = function(){ // private property
+				return "Hello World";
+			};
+			this.getPrice1 = function(){ return price1; }; // public function
+			this.getPrice2 = function(){ return price2; }; // public function
+			this.getPrice3 = function(){ return price2; }; // public function
+		};
+		var samsung = new mobile("Galaxy", 2000);
+		var nokia = new mobile("3310", 1000);
+		samsung.data();
+		nokia.data();
+		document.write("Price1: " + nokia.getPrice1() + "<br>"); // Read private property
+		document.write("Price2: " + nokia.getPrice2() + "<br>"); // Read private property
+		document.write("Price3: " + nokia.getPrice3() + "<br>"); // Read private property*/
+
+		// PROTOTYPE
 		
 
 		// --------------------------------------------------
