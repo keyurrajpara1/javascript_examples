@@ -712,6 +712,51 @@
 		document.write("Price3: " + nokia.getPrice3() + "<br>"); // Read private property*/
 
 		// PROTOTYPE
+		/*
+		// Js access bottom to top
+		// samsung object -> mobile object -> prototype object -> object
+		var mobile = function(modelNo){
+			this["model"] = modelNo; // Instance member
+			this["price"] = 3000; // Instance member
+		};
+		var samsung = new mobile("Galaxy");
+		var nokia = new mobile("3310");
+		samsung["color"] = "White";
+		nokia["color"] = "White";
+		document.write(samsung["color"] + "<br>"); // samsung object member
+		document.write(nokia["color"] + "<br>"); // nokia object member
+		console.log(samsung);
+		console.log(nokia);
+
+		mobile.prototype["ram"] = 1000; // Prototype member
+		mobile.prototype["show"] = function() { // Prototype member
+			return "Prototype Show Method";
+		};
+		document.write(samsung["ram"] + "<br>");
+		document.write(nokia["ram"] + "<br>");
+		document.write(samsung.show() + "<br>");
+		document.write(nokia.show() + "<br>");
+		console.log(samsung);
+		console.log(nokia);
+		*/
+
+		// HOW TO ITERATE INSTANCE AND PROTOTYPE MEMBER USING FOR IN LOOP
+		/*var mobile = function(modelNo) {
+			this.model = modelNo;
+			this.price = 3000;
+		};
+		var samsung = new mobile('Galaxy');
+		var nokia = new mobile('3310');
+		mobile.prototype.color = "White";
+		document.write(samsung.color + "<br>");
+		console.log(samsung);
+		document.write(Object.keys(samsung) + "<br>"); // model,price
+		document.write(Object.keys(nokia) + "<br>"); // model,price
+		for(var key in samsung){
+			document.write(key + ", "); // model, price, color, 
+		}*/
+
+		// Prototype Object
 		
 
 		// --------------------------------------------------
